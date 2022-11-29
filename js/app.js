@@ -15,19 +15,19 @@ else if (questionOneGuess === 'no' || questionOneGuess === 'n'){
 let userQuestionThree = prompt( 'Do I have children?').toLowerCase();
 
 if(userQuestionThree === 'yes' || userQuestionThree === 'y'){
-  alert ('You are correct!');
+  alert ('Sorry you got it wrong ');
 }
 else{
-  alert ( 'Sorry you got it wrong');
+  alert ( 'Yes you are coreect!');
 }
 
 let userQuestionGuess = prompt( 'Do I have any pets?').toLowerCase();
   
 if(userQuestionGuess === 'yes' || userQuestionGuess === 'y'){
-  alert ('You are correct!');
+  alert ('Sorry you got it wrong');
 }
 else if (userQuestionGuess === 'no' || userQuestionGuess === 'n'){
-  alert ( 'Sorry you got it wrong');
+  alert ( 'You are correct!');
 }
 
 let fiveGuessQuestion = prompt('Do I own a instrument?').toLowerCase(); 
