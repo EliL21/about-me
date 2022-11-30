@@ -38,5 +38,24 @@ else if (fiveGuessQuestion === 'no' || fiveGuessQuestion === 'n'){
   alert ( 'Sorry you got it wrong');
 }
 
+let score = 0; 
+
+let nums = 3;
+
+let userQuestionSix =prompt ('What number am I thinking of its a number between 1 and 7');
+
+while (nums < userQuestionSix){
+  userQuestionSix = prompt(`${userQuestionOne} try again you're too high`);
+ nums--
+  if(userQuestionSix === nums){
+    alert (`${userQuestionOne} that'sa great guess, you are correct`);
+   
+    score++
+  }
+  
+
+  alert(`${userQuestionOne} you are correct`);
+}
+
 
 alert(`Thank you for participating ${userQuestionOne}! I nnow grant you access to my deppest darkest secrets!!!`);
