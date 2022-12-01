@@ -1,5 +1,7 @@
 'use strict';
 
+// Pair Programming @Cleland
+
 let userQuestionOne = prompt('What is your name?');
 alert(`welcome to my site ${userQuestionOne}!Please answer the following questions with yes/no or y/n`);
 
@@ -80,7 +82,7 @@ for (let i = 0; i < 6; i++) {
   for (let j = 0; j < favMovie.length; j++) {
     if (questionSevenGuess === favMovie[5]) {
       alert('correct one of the funniest movies ever created!!!!')
-       if (questionSevenGuess === favMovie[0, || 1, || 2, || 3, || 4]) {
+      if (questionSevenGuess === favMovie[0, || 1, || 2, || 3, || 4]) {
         alert(`${userQuestionOne} all great movie but no. Please try again`);
       }
       else (questionSevenGuess === 6) {
