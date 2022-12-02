@@ -2,99 +2,112 @@
 
 // Pair Programming @Cleland
 
-let userQuestionOne = prompt('What is your name?');
-alert(`welcome to my site ${userQuestionOne}!Please answer the following questions with yes/no or y/n`);
+function guessingGame() {
 
-let questionOneGuess = prompt('Do you I have siblings?').toLowerCase();
+  let userQuestionOne = prompt('What is your name?');
+  alert(`welcome to my site ${userQuestionOne}!Please answer the following questions with yes/no or y/n`);
 
-if (questionOneGuess === 'yes' || questionOneGuess === 'y') {
-  alert('You are correct!');
-}
-else if (questionOneGuess === 'no' || questionOneGuess === 'n') {
-  alert('Sorry you got it wrong');
+  let questionOneGuess = prompt('Do you I have siblings?').toLowerCase();
 
-}
-let userQuestionThree = prompt('Do I have children?').toLowerCase();
-
-if (userQuestionThree === 'yes' || userQuestionThree === 'y') {
-  alert('Sorry you got it wrong ');
-}
-else {
-  alert('Yes you are coreect!');
-
-}
-
-let userQuestionGuess = prompt('Do I have any pets?').toLowerCase();
-
-if (userQuestionGuess === 'yes' || userQuestionGuess === 'y') {
-  alert('Sorry you got it wrong');
-}
-else if (userQuestionGuess === 'no' || userQuestionGuess === 'n') {
-  alert('You are correct!');
-
-}
-
-let fiveGuessQuestion = prompt('Do I own a instrument?').toLowerCase();
-if (fiveGuessQuestion === 'yes' || fiveGuessQuestion === 'y') {
-  alert('You are correct!');
-
-}
-else if (fiveGuessQuestion === 'no' || fiveGuessQuestion === 'n') {
-  alert('Sorry you got it wrong');
-}
-
-let score = 0;
-let nums = 3;
-for (let i = 0; i < 4; i++) {
-
-
-  let userQuestionSix = prompt('What number am I thinking of its a number between 1 and 7');
-
-  if (nums < userQuestionSix) {
-    alert(`${userQuestionOne} try again you're too high`);
+  if (questionOneGuess === 'yes' || questionOneGuess === 'y') {
+    alert('You are correct!');
   }
-  else if (nums > userQuestionOne) {
-    alert(`${userQuestionOne} try again the number is too low`);
+  else if (questionOneGuess === 'no' || questionOneGuess === 'n') {
+    alert('Sorry you got it wrong');
 
   }
-  else if (userQuestionSix === nums) {
-    alert(`${userQuestionOne} that's a great guess, you are correct`);
-    score++;
-    break;
+  let userQuestionThree = prompt('Do I have children?').toLowerCase();
+
+  if (userQuestionThree === 'yes' || userQuestionThree === 'y') {
+    alert('Sorry you got it wrong ');
+  }
+  else {
+    alert('Yes you are coreect!');
 
   }
-  if (i === 3) {
-    alert(`${userQuestionOne} you are all out of chances the answer was ${nums}`);
+
+
+  let userQuestionGuess = prompt('Do I have any pets?').toLowerCase();
+
+  if (userQuestionGuess === 'yes' || userQuestionGuess === 'y') {
+    alert('Sorry you got it wrong');
+  }
+  else if (userQuestionGuess === 'no' || userQuestionGuess === 'n') {
+    alert('You are correct!');
 
   }
+
+  let fiveGuessQuestion = prompt('Do I own a instrument?').toLowerCase();
+  if (fiveGuessQuestion === 'yes' || fiveGuessQuestion === 'y') {
+    alert('You are correct!');
+
+  }
+  else if (fiveGuessQuestion === 'no' || fiveGuessQuestion === 'n') {
+    alert('Sorry you got it wrong');
+  }
 }
+guessingGame();
 
 
 
-for (let i = 0; i < 4; i++) {
-  alert(`${userQuestionOne} you are all out of chances the answer was ${nums}`);
+function numberGame() {
+
+
+  let nums = 3;
+  for (let i = 0; i < 4; i++) {
+
+
+    let userQuestionSix = prompt('What number am I thinking of its a number between 1 and 7');
+
+    if (nums < userQuestionSix) {
+      alert('try again you\'re too high');
+    }
+    else if (nums > userQuestionSix) {
+      alert('try again the number is too low');
+
+    }
+    else if (parseInt(userQuestionSix) === nums) {
+      alert('that\'s a great guess, you are correct');
+
+      break;
+
+    }
+    if (i === 3) {
+      alert(`you are all out of chances the answer was ${nums}`);
+
+    }
+  }
 }
+numberGame();
 
-let favMovie = ['superbad', 'harry potter', 'good will hunting', 'knives out', 'rush hour', 'hot tub time machine'];
+function favoriteMovie() {
 
-for (let i = 0; i < 6; i++) {
-  let questionSevenGuess = prompt(`${userQuestionOne} What do you think my favorite movie is?`).toLowerCase();
-  for (let j = 0; j < favMovie.length; j++) {
+  let score = 0;
+  let favMovie = ['superbad', 'harry potter', 'good will hunting', 'knives out', 'rush hour', 'hot tub time machine'];
+
+  for (let i = 0; i < 6; i++) {
+    let questionSevenGuess = prompt('What do you think my favorite movie is?').toLowerCase();
+
     if (questionSevenGuess === favMovie[5]) {
-      alert('correct one of the funniest movies ever created!!!!')
-      if (questionSevenGuess === favMovie[0, || 1, || 2, || 3, || 4]) {
-        alert(`${userQuestionOne} all great movie but no. Please try again`);
-      }
-      else (questionSevenGuess === 6) {
-        alert(`${userQuestionOne} you are all out of tries. My favorite movie is ${favNovie[5]}`);
-      }
+      alert('correct one of the funniest movies ever created!!!!');
       score++;
-      i = 6;
       break;
     }
+    else {
+      for (let j = 0; j < favMovie.length; j++) {
 
+        if (questionSevenGuess === favMovie[j]) {
+          alert('all great movie but no. Please try again');
+        }
+
+
+
+      }
+
+    }
+  }
+  if (score === 0) {
+    alert(`you are all out of tries. My favorite movie is ${favMovie[5]}`);
   }
 }
-
-
-alert(`Thank you for participating ${userQuestionOne}! I nnow grant you access to my deppest darkest secrets!!!`);
+favoriteMovie();
